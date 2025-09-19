@@ -79,7 +79,6 @@ avg_pit_ms = st.sidebar.number_input("Durée moyenne pitstop (ms)", 1500, 6000, 
 is_rain = st.sidebar.checkbox("Pluie ?", False)
 
 st.title(" Prédiction Résultats F1")
-st.caption("Top10, Temps prédit, et **simulateur de vainqueur** (classement de tous les engagés).")
 
 st.subheader("Prédiction un pilote")
 df_input = build_df_input(year, round_, gp_name, forename, surname, team, grid, n_pitstops, avg_pit_ms, is_rain)
@@ -115,8 +114,6 @@ if colA.button("Prédire"):
 
 st.divider()
 st.subheader("Vainqueur — prédire parmi tous les pilotes")
-
-st.caption("Choisis une course (Année / Round / GP). Clique **Charger les engagés** pour pré-remplir les pilotes (à partir de l'historique si dispo), ajuste les grilles si besoin, puis **Prédire vainqueur**.")
 
 def propose_grid_from_hist(year_all, round_all, gp_all):
     """Essaie de proposer une grille cohérente depuis l'historique."""
